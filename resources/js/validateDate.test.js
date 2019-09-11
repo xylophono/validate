@@ -6,6 +6,7 @@ test('Valid date returns true', () => {
 
 test('Invalid date returns false', () => {
     expect(validateDate('31/02/2019')).toBeFalsy();
+    expect(validateDate('01/19/2019')).toBeFalsy();
 });
 
 test('Feb 29th is handelled appropriately on leap years', () => {
@@ -14,6 +15,7 @@ test('Feb 29th is handelled appropriately on leap years', () => {
 });
 
 test('Anything outside of dd/mm/yyyy regex should be false', () => {
+    expect(validateDate('1/1/19')).toBeFalsy();
     expect(validateDate('01-01-2000')).toBeFalsy();
     expect(validateDate('hello')).toBeFalsy();
 });
