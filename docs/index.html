@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <h1>Date Validator</h1>
+    <p>Please enter a date in the format dd/mm/yyyy.</p>
+
+    <form action="#" method="POST">
+        <input type="text" minlength="10" maxlength="10" pattern="^([01-31])+([\/])+([01-12])+([\/])+([0-9]{4})$" required>
+        <input type="submit" value="Validate">
+    </form>
+    
+    <script src="app.js" defer></script>
+</body>
+</html>
