@@ -25,6 +25,11 @@ export default function(date) {
         '12': 31
     };
 
+    //If the month supplied doesn't correspond to a key in days then it's invalid
+    if(!days.hasOwnProperty(date[1])) {
+        return false;
+    }
+
     //Is it a leap year? if so amend feb to 29 days
     if(new Date(date[2], 1, 29).getDate() === 29) {
         days['02'] = 29;
