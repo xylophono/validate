@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
 
-    <h1>Date Validator</h1>
-    <p>Please enter a date in the format dd/mm/yyyy.</p>
+    <div class="container">
+            <h1>Date Validator</h1>
+        
+            <form id="mainform" action="#" method="POST" class="form" autocomplete="off">
+                <input type="hidden" autocomplete="false">
+                <label class="form__label" for="dateinput">Date (DD/MM/YYYY):</label>
+                <input class="form__input" id="dateinput" name="date" type="text" minlength="10" maxlength="10" pattern="^([0-2][0-9]|(3)[0-1])([\/])(((0)[0-9])|((1)[0-2]))([\/])([0-9]{4})$" placeholder="DD/MM/YYYY" value="" required>
+                <input class="form__submit" type="submit" name="submit" value="Validate">
+                <p class="form__result">&nbsp;</p>
+            </form>
+    </div>
 
-    <form id="mainform" action="#" method="POST">
-            <input id="dateinput" name="date" type="text" minlength="10" maxlength="10" pattern="^([0-3][0-9])([\/])([0-1][0-9])([\/])([0-9]{4})$" placeholder="dd/mm/yyyy" value="" required>
-            <!-- <input id="dateinput" name="date" type="text" minlength="10" maxlength="10" placeholder="dd/mm/yyyy" value="" required> -->
-        <input type="submit" name="submit" value="Validate">
-    </form>
-    
     <script src="app.js" defer></script>
 </body>
 </html>

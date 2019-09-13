@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+
+$blue: #136a8a;
+$green: #267871;
+
+  
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: -fill-available;
+
+    margin: 0;
+    padding: 0;
+    
+    background-color: $blue;
+    background-image: linear-gradient(135deg, $blue, $green);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    font-size: 18px;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.4;
+    color: darken($blue, 20%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: inherit;
+    font-size: 4rem;
+    color: darken($blue, 10%);
+    margin: 0 0 1rem 0;
+    padding: 0;
+    line-height: 1;
+
+}
+
+p {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+    font-weight: 400;
+}
+
+.container {
+    flex: 0 0 1;
+
+    width: 100%;
+    max-width: 600px;
+
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.form {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    .form__input {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 1rem;
+        
+        font-family: inherit;
+        font-size: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+
+        border: 2px solid $blue;
+        border-radius: 0.5rem;
+
+        &:focus, &:active {
+            outline: none;
+            box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+        }
+
+        &:invalid {
+            border-color: #de0001;
+        }
+
+        &:placeholder-shown {
+            border-color: $blue;
+        }
+
+        &:valid {
+            border-color: $blue;
+        }
+    }
+
+    .form__label {
+        display: block;
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 0.25rem;
+        font-weight: 700;
+        color: darken($blue, 10%);
+    }
+
+    .form__submit {
+        display: block;
+        margin: 0 auto 1rem;
+        width: auto;
+        max-width: auto;
+        color: #FFF;
+        background-color: $blue;
+        border: none;
+        border-radius: 0.5rem;
+        font-family: inherit;
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+
+        &:hover, &:focus {
+            cursor: pointer;
+            background-image: linear-gradient(135deg, $blue, $green)
+        }
+
+        &:focus, &:active {
+            outline: none;
+            box-shadow: 0 0 10px 1px rgba(0,0,0,1);
+        }
+    }
+
+    .form__result {
+        font-size: 1.25rem;
+    }
+}
