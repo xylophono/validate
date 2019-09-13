@@ -1,10 +1,10 @@
 # validate - vanilla js date validation function
 
-### _View:_ https://xylophono.github.io/validate
+## _View:_ https://xylophono.github.io/validate
 
-_HTML:_ docs/index.html  
-_Function:_ resources/js/validateDate.js  
-_Tests (Jest):_ resources/js/validateDate.test.js  
+_HTML:_ https://github.com/xylophono/validate/blob/master/docs/index.html  
+_Javascript Function:_ https://github.com/xylophono/validate/blob/master/resources/js/validateDate.js  
+_Tests (Jest):_ https://github.com/xylophono/validate/blob/master/resources/js/validateDate.test.js  
 
 ```
  PASS  resources/js/validateDate.test.js
