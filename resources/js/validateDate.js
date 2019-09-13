@@ -28,7 +28,7 @@ export default function(input) {
         '12': 31
     };
 
-    //If the month supplied doesn't correspond to a key in days then it's invalid
+    //If the month supplied doesn't correspond to a key in months obj then it's invalid
     // - This test is redundant now that the regex has been updated to better match months -
     // if(!days.hasOwnProperty(date[1])) {
     //     return false;
